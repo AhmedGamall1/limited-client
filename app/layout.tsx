@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} min-h-screen`}
+        className={`${poppins.className} min-h-screen  sm:bg-left-top bg-center`}
         style={{
           backgroundImage: `url('/WhatsApp Image 2024-04-05 at 22.29.14_bfb58c2f.jpg')`,
           backgroundRepeat: "no-repeat",
@@ -50,6 +50,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-
-

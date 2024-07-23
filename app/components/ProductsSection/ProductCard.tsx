@@ -23,12 +23,10 @@ const ProductCard: FC<Props> = ({
     <div>
       <div className="flex flex-col items-center px-8 sm:px-3 hover:px-3 transition-all ">
         <div className="rounded-sm relative">
-          <Image
+          <img
             src={imgUrl}
             alt={"image"}
-            width={300}
-            height={250}
-            className="cursor-pointer hover:scale-100 sm:hover:scale-105 transition-all"
+            className="cursor-pointer hover:scale-100 sm:hover:scale-105 transition-all w-[300px] h-[420px]"
           />
           {!inStock && (
             <div className="top-2 right-1 rounded-md text-sm font-semibold absolute px-3 py-1 text-white border uppercase border-white">
