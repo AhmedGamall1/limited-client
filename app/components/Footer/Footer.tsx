@@ -123,10 +123,7 @@ const Footer = () => {
       <span className="text-sm flex-center text-center gap-3 font-medium">
         <span className="text-primary ">Developers</span>
         <span className="flex-center gap-2 text-white">
-          <a
-            href={`https://www.upwork.com/freelancers/~015f847e661913442a`}
-            className=""
-          >
+          <a href={``} className="">
             Ahmed
           </a>
           <span>,</span>
