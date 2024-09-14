@@ -28,11 +28,10 @@ const CreateProduct = ({ setItem }: any) => {
     category: "",
     info: productInfo,
   });
-
   useEffect(() => {
     if (data) {
       setCategories(
-        data.categories.map((category: string) => ({ value: category })),
+        data.categories.map((category: string) => ({ value: category }))
       );
     }
     if (isSuccess) {
@@ -46,10 +45,10 @@ const CreateProduct = ({ setItem }: any) => {
       }
     }
   }, [data, error, isSuccess, createLoading]);
-
   const handleProductCreate = async (e: any) => {
     e.preventDefault();
-    const data = { ...productObject, images };
+
+    const data = { ...productObject, images, info: productInfo };
     if (
       data.images.length <= 0 ||
       !data.name ||

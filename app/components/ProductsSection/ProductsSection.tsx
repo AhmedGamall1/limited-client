@@ -83,7 +83,7 @@ const Products = () => {
       </div>
       {/* DISPLAYING PRODUCTS */}
       {!productLoading && (
-        <ul className="grid md:grid-cols-3 gap-12 -mt-4 sm:mt-0 md:gap-x-4 md:gap-y-10">
+        <ul className="grid md:grid-cols-4 gap-14 -mt-4 sm:mt-0 md:gap-x-4 md:gap-y-10">
           {products.length === 0 ? (
             <div className="flex-center font-medium text-[22px] text-white">
               No Products Found...

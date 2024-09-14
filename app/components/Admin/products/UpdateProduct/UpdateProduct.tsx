@@ -46,7 +46,7 @@ const UpdateProduct = ({ productId }: any) => {
       setCategories(
         categoriesData.categories.map((category: string) => ({
           value: category,
-        })),
+        }))
       );
     }
     if (getProductSuccess) {
@@ -75,7 +75,7 @@ const UpdateProduct = ({ productId }: any) => {
 
   const handleProductCreate = async (e: any) => {
     e.preventDefault();
-    const data = { ...productObject, images };
+    const data = { ...productObject, images, info: productInfo };
     if (
       data.images.length <= 0 ||
       !data.name ||

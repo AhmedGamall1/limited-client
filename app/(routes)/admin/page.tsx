@@ -31,7 +31,7 @@ const page = () => {
   };
 
   return (
-    <div className="flex flex-col bg-black bg-opacity-50">
+    <div className="flex flex-col bg-black bg-opacity-50 min-h-[100vh]">
       <AdminProtected>
         <div className="text-white grid grid-cols-12 w-full h-full py-8">
           <div className="col-span-3 w-full h-full">

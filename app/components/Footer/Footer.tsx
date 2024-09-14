@@ -121,14 +121,14 @@ const Footer = () => {
         </a>
       </div>
       <span className="text-sm flex-center text-center gap-3 font-medium">
-        <span className="text-primary ">Developers</span>
+        <span className="text-primary ">Developer</span>
         <span className="flex-center gap-2 text-white">
-          <a href={``} className="">
-            Ahmed
-          </a>
-          <span>,</span>
-          <a href={`mailto:${"bidogamal2004@gmail.com"}`} className="">
-            Abdelrahman
+          <a
+            href={`https://portfolio-drab-sigma-76.vercel.app/`}
+            target="_blank"
+            className=""
+          >
+            Gamal
           </a>
         </span>
       </span>

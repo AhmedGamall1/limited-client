@@ -9,16 +9,23 @@ type Props = {
 
 const AddSize: FC<Props> = ({ productInfo, setProductInfo }) => {
   const handleSizeChange = (index: number, value: any) => {
-    const updatedSize = [...productInfo];
+    // Create a deep copy of the productInfo array
+    const updatedSize = productInfo.map((item: any) => ({ ...item }));
+    // Update the size property of the specific item
     updatedSize[index].size = value;
+
+    // Set the updated productInfo
     setProductInfo(updatedSize);
   };
 
-  const handleQuantitychange = (index: number, value: any) => {
-    const updatedQuantity = [...productInfo];
+  const handleQuantityChange = (index: number, value: any) => {
+    // Create a deep copy of the productInfo array
+    const updatedQuantity = productInfo.map((item: any) => ({ ...item }));
 
+    // Update the quantity property of the specific item
     updatedQuantity[index].quantity = value;
 
+    // Set the updated productInfo
     setProductInfo(updatedQuantity);
   };
 
@@ -63,7 +70,7 @@ const AddSize: FC<Props> = ({ productInfo, setProductInfo }) => {
                   placeholder="Enter a number"
                   value={item.quantity}
                   className={customerInputsStyles}
-                  onChange={(e) => handleQuantitychange(index, e.target.value)}
+                  onChange={(e) => handleQuantityChange(index, e.target.value)}
                 />
               </div>
             </div>

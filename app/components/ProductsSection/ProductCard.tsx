@@ -26,7 +26,7 @@ const ProductCard: FC<Props> = ({
           <img
             src={imgUrl}
             alt={"image"}
-            className="cursor-pointer hover:scale-100 sm:hover:scale-105 transition-all w-[300px] h-[420px]"
+            className="cursor-pointer hover:scale-100 sm:hover:scale-105 transition-all w-[270px] h-[350px]"
           />
           {!inStock && (
             <div className="top-2 right-1 rounded-md text-sm font-semibold absolute px-3 py-1 text-white border uppercase border-white">

@@ -13,7 +13,7 @@ import { IoMdAddCircleOutline } from "react-icons/io";
 const EditCategories = () => {
   const { data, isLoading, refetch } = useGetCategoriesQuery(
     {},
-    { refetchOnMountOrArgChange: true },
+    { refetchOnMountOrArgChange: true }
   );
   const [editCategories, { isSuccess, error }] = useUpdateCategoriesMutation();
   const [categories, setCategories] = useState<any[]>([]);
@@ -23,7 +23,7 @@ const EditCategories = () => {
   useEffect(() => {
     if (data) {
       setCategories(
-        data.categories.map((category: string) => ({ value: category })),
+        data.categories.map((category: string) => ({ value: category }))
       );
     }
 
@@ -43,8 +43,8 @@ const EditCategories = () => {
   const handleCategoriesAdd = (id: any, value: string) => {
     setCategories((prevCategory: any) =>
       prevCategory.map((category: any, index: any) =>
-        index === id ? { ...category, value } : category,
-      ),
+        index === id ? { ...category, value } : category
+      )
     );
   };
 
@@ -69,20 +69,20 @@ const EditCategories = () => {
     <div className="text-center w-[75%] mx-auto flex flex-col items-center justify-center">
       <Heading title="Categories - limited.eg" />
 
-      <h1 className={`${styles.title}`}>All Categories</h1>
+      <h1 className={`${styles.title} text-white`}>All Categories</h1>
       {categories &&
         categories.map((item: any, index: number) => {
           return (
-            <div className="p-3" key={index}>
+            <div className="p-3 w-full" key={index}>
               <div className="flex items-center gap-2 w-full justify-center">
                 <input
-                  className={`${styles.input} !w-[unset]  !text-[20px]`}
+                  className={`${styles.input} !w-[80%]  !text-[20px]`}
                   value={item.value}
                   onChange={(e) => handleCategoriesAdd(index, e.target.value)}
                   placeholder="Enter category title..."
                 />
                 <AiOutlineDelete
-                  className=" text-red-300 text-[23px] cursor-pointer"
+                  className=" text-red-400 text-[23px] cursor-pointer"
                   onClick={() => {
                     if (index !== 0) {
                       const newArr = [...categories];

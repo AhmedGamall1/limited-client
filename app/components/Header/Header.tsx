@@ -5,6 +5,12 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getTotals } from "@/app/redux/features/cart/cartSlice";
+import { Kanit } from "next/font/google";
+
+const kanit = Kanit({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const Header = () => {
   const { cartItems, cartTotalQty } = useSelector((state: any) => state.cart);
@@ -20,7 +26,7 @@ const Header = () => {
       <div className="flex w-full flex-wrap items-center justify-between mx-auto px-7 py-[10px] md:px-24  md:py-6">
         <Link
           href={"/"}
-          className={`text-lg lg:text-3xl text-white font-semibold `}
+          className={`text-lg lg:text-3xl text-white font-semibold  ${kanit.className}`}
         >
           Limited
         </Link>

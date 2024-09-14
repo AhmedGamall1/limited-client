@@ -51,9 +51,8 @@ const SingleOrderDetails: FC<Props> = ({ id }) => {
   }, [isSuccess, error]);
 
   const formattedDate = format(
-    (data as unknown as { createdAt: string })?.createdAt,
+    (data as unknown as { createdAt: string })?.createdAt
   );
-
   return (
     <div className="w-full pb-14 flex flex-col">
       <Heading
@@ -99,21 +98,21 @@ const SingleOrderDetails: FC<Props> = ({ id }) => {
             key={index}
           >
             <Image
-              src={item.product.images[0].url}
+              src={item.product?.images[0].url}
               alt={"image"}
               width={200}
               height={200}
             />
             <div className="flex flex-col items-start justify-center py-3 gap-5">
               <span className={` text-purple-300 font-semibold text-[20px]`}>
-                {item.product.name}
+                {item.product?.name}
               </span>
               <span className={`text-white flex-center gap-2`}>
                 <span className=" text-purple-300">Price: </span>{" "}
                 {
                   <Price
-                    price={item.product.price}
-                    discountPrice={item.product.discountPrice}
+                    price={item.product?.price}
+                    discountPrice={item.product?.discountPrice}
                   />
                 }
               </span>
@@ -125,8 +124,8 @@ const SingleOrderDetails: FC<Props> = ({ id }) => {
                 <span className=" text-purple-300">SubTotal: </span>{" "}
                 {
                   <Price
-                    price={item.product.price * item.quantity}
-                    discountPrice={item.product.discountPrice * item.quantity}
+                    price={item.product?.price * item.quantity}
+                    discountPrice={item.product?.discountPrice * item.quantity}
                   />
                 }
               </span>
